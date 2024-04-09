@@ -3,7 +3,7 @@ import numpy as np
 
 from ultralytics import YOLO
 
-det_weight = 'best.pt'
+det_weight = 'last.pt'
 
 class YOLOv8_Detection:
     def __init__(self, model_path, conf=0.5):
@@ -39,7 +39,7 @@ class YOLOv8_Detection:
 model_det = YOLOv8_Detection(det_weight)
 
 # Open the video file
-video_path = '2024-03-13/하이트비전영상/192.168.1.7_01_20240313105731960_5.mp4'
+video_path = '../2024-03-13/하이트비전영상/192.168.1.7_01_20240313105731960_5.mp4'
 cap = cv2.VideoCapture(video_path)
 
 # Check if the video opened successfully
